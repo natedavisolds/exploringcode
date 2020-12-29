@@ -1,6 +1,17 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
+const Footer = () =>
+  <footer className={styles.footer}>
+    <span className="copyright">Copyright &copy; 2020 Nathan Davis Olds</span>
+  </footer>
+
+const SiteHeader = () =>
+  <header className={styles['site-header']}>
+    <span className={styles['site-brand']}>nate davis olds</span>
+  </header>
+
+
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -9,6 +20,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <SiteHeader />
       <main className={styles.main}>
         <h1 className={styles.title}>An invitation to explore code.</h1>
 
@@ -24,6 +36,8 @@ export default function Home() {
           <p>Let’s get started.</p>
         </article>
       </main>
+
+      <Footer />
     </div>
   )
 }
