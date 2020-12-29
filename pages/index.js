@@ -1,30 +1,17 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-
-const Footer = () =>
-  <footer className={styles.footer}>
-    <span className="copyright">Copyright &copy; 2020 Nathan Davis Olds</span>
-  </footer>
-
-const SiteHeader = () =>
-  <header className={styles['site-header']}>
-    <span className={styles['site-brand']}>nate davis olds</span>
-  </header>
-
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Exploring Code - davisolds.com</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <SiteHeader />
-      <main className={styles.main}>
-        <h1 className={styles.title}>An invitation to explore code.</h1>
+      <main className="main">
+        <h1 className="title">An invitation to explore code.</h1>
 
-        <article className={styles.article}>
+        <article className="article">
           <p>If anyone tells you there is a “right”  syntax or format to write web applications, they haven’t been programming long enough.  There are countless techniques and styles that people have adopted as <em>the way</em> to code and while it works for the them in their niche domain space, it will not universally fit every problem.  As coders, the closest we can get to the one way is to have practices and patterns that are mutually agreed upon within a team to solve that domain problem.  But to decide on the right practice or pattern, we first need to explore and share the challenges and advantages of each approach.</p>
 
           <p>In this series, I aim to explore various ways to accomplish the same problem.  Every segment, the problem space will be viewed with a different lens resulting in different decisions and results.  The end code will work for that case but also be available to compare and contracts its strengths with other approaches.</p>
@@ -36,8 +23,6 @@ export default function Home() {
           <p>Let’s get started.</p>
         </article>
       </main>
-
-      <Footer />
-    </div>
+    </>
   )
 }
