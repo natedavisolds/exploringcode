@@ -1,14 +1,11 @@
 import 'styles/globals.scss'
-import Footer from 'components/Footer'
-import SiteHeader from 'components/SiteHeader'
+import Layout from '@components/Layout'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div className="container">
-      <SiteHeader />
+    <Layout>
       <Component {...pageProps} />
-      <Footer />
-    </div>
+    </Layout>
   )
 }
 
