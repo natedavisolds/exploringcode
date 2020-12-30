@@ -1,5 +1,8 @@
 import Head from 'next/head'
 
+const TypedIn = ({children}) =>
+  <span className="typed-in">{children}</span>
+
 export default function Home() {
   return (
     <>
@@ -9,7 +12,9 @@ export default function Home() {
       </Head>
 
       <main className="main">
-        <h1 className="title">An invitation to explore code.</h1>
+        <h1 className="title">
+          An invitation <span className="cursor"><span className="typed-in"> to explore code.</span><span className="typed-in2">to learn together.</span></span>
+        </h1>
 
         <article className="article">
           <p>If anyone tells you there is a “right”  syntax or format to write web applications, they haven’t been programming long enough.  There are countless techniques and styles that people have adopted as <em>the way</em> to code and while it works for the them in their niche domain space, it will not universally fit every problem.  As coders, the closest we can get to the one way is to have practices and patterns that are mutually agreed upon within a team to solve that domain problem.  But to decide on the right practice or pattern, we first need to explore and share the challenges and advantages of each approach.</p>

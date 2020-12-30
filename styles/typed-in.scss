@@ -1,0 +1,55 @@
+@keyframes typed1 {
+  15%, 45% {
+    width: 6.6em;
+    display:inline-flex;
+  }
+
+  0%, 46%, 100% {
+    width: 0em;
+    display: none;
+  }
+}
+
+@keyframes typed2 {
+  65%, 100% {
+    width: 7em;
+    display:inline-flex;
+  }
+
+  0%, 50% {
+    width: 0em;
+    display: none;
+  }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+.typed-in {
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  display:inline-flex;
+  animation:
+    typed1 15s steps(20, end) 5;
+}
+
+.cursor {
+  color: orange;
+  border-right: .1em solid transparent;
+  animation:
+    blink-caret 1s step-end 75;
+}
+
+.typed-in2 {
+  width: 7em;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  display:inline-flex;
+  animation:
+    typed2 15s steps(20, end) 5;
+}
