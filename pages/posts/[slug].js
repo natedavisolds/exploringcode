@@ -1,7 +1,6 @@
-import React from 'react'
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
-import {getAllPosts} from 'lib/posts'
+import {getAllPosts} from '../../lib/posts'
 import Link from 'next/link'
 
 const Related = ({title="Related Posts",posts=[]}) =>
