@@ -1,13 +1,14 @@
 import Head from 'next/head'
+import Link from 'next/link'
 
 const TypedIn = ({children}) =>
   <span className="typed-in">{children}</span>
 
-export default function Home() {
+const Home = ({title}) => {
   return (
     <>
       <Head>
-        <title>Exploring Code - davisolds.com</title>
+        <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -26,8 +27,25 @@ export default function Home() {
           <p>I invite you to join me.  Through deep analysis and discussion, I believe the approaches (and then the decisions) will be sharpened to its distinguishing point.  And by knowing the distinguishing point, we will make better choices when writing code.  With better choices, comes cleaner code that is developed quicker and is easier to maintain long term.</p>
 
           <p>Let’s get started.</p>
+
+          <ul>
+            <li><Link href="/posts/approaching-exploration"><a>Approaching Exploration</a></Link></li>
+          </ul>
         </article>
       </main>
     </>
   )
+}
+
+export default Home
+
+export async function getStaticProps() {
+  const configData =  await import(`../data/site.json`)
+
+  return {
+    props: {
+      title: configData.title,
+      description: configData.description,
+    },
+  }
 }
